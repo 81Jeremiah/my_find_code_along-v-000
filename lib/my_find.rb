@@ -1,8 +1,9 @@
 require 'pry'
 
 def my_find(collection)
-
-  collection.each{|i| return collection[i-1] if yield(collection[i-1])}
-
-
+  i = 0
+ while i < collection.length
+    return collection[i] if
+yield(collection[i])
+   i += 1
 end
